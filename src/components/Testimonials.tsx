@@ -35,22 +35,29 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 px-8 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-primary mb-6 reveal">
+        <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-primary mb-6 rounded reveal">
           Parent Testimonials
         </div>
         
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-16 text-center leading-tight reveal delay-100">
-          What Our Parents <br />
-          <span className="text-primary italic font-serif">Are Saying</span>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight text-center mb-16">
+          What Parents & Students <br />
+          <span className="text-primary">Are Saying</span>
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {testimonials.map((t, i) => (
+      </div>
+
+      {/* Marquee Container */}
+      <div className="relative w-full overflow-hidden flex pb-8">
+        {/* Gradient Fades for edges */}
+        <div className="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+        <div className="flex w-max animate-slide-left gap-6 px-3">
+          {[...testimonials, ...testimonials].map((t, i) => (
             <div 
               key={i} 
-              className={`reveal bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 relative group delay-${(i % 3 + 1) * 100}`}
+              className="w-[300px] md:w-[380px] shrink-0 bg-slate-50 p-8 rounded border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 relative group"
             >
               <Quote size={40} className="text-primary/10 absolute top-6 right-6 group-hover:text-primary/20 transition-colors" />
               
@@ -59,7 +66,7 @@ const Testimonials = () => {
                 <div className="text-xs text-slate-500 font-medium">Proud Parent</div>
               </div>
 
-              <p className="text-slate-600 text-sm leading-relaxed italic line-clamp-2">
+              <p className="text-slate-600 text-sm leading-relaxed">
                 "{t.body}"
               </p>
             </div>
@@ -71,4 +78,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
