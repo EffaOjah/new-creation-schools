@@ -74,12 +74,6 @@ const AboutStats = () => {
                         >
                             Read More <ArrowRight size={16} />
                         </a>
-                        <a
-                            href="/admissions"
-                            className="text-slate-700 font-semibold hover:text-primary transition-colors underline underline-offset-4"
-                        >
-                            Admissions Info
-                        </a>
                     </div>
                 </div>
 

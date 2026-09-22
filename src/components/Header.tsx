@@ -58,11 +58,11 @@ const Header = () => {
           className={`bg-primary text-white text-xs px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 font-mono tracking-wide transition-all duration-300 overflow-hidden ${scrolled ? 'max-h-0 py-0 opacity-0' : 'max-h-20 py-2 opacity-100'
             }`}
         >
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             Main Campus: 4 Uwanse Close, Calabar, Nigeria
-          </div>
+          </div> */}
           <div className="flex items-center">
-            Admissions open for 2026/2027 academic session
+            Admissions open for 2026/2027 session
           </div>
         </div>
 
