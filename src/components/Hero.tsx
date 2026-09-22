@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, Lightbulb, Globe, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import heroImage from '../assets/hero1.png';
 
 const Hero = () => {
@@ -62,53 +62,6 @@ const Hero = () => {
           </a>
         </div>
       </section>
-
-      {/* Feature Strip — below hero */}
-      <div className="bg-white py-8 px-8 border-b border-slate-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-x-0 lg:divide-x divide-slate-300">
-            <div className="flex items-center gap-4 px-4">
-              <div className="w-10 h-10 bg-green-50 flex items-center justify-center text-green-700 shrink-0">
-                <GraduationCap size={20} />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-sm">World-Class Education</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Learn from the best</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 px-4">
-              <div className="w-10 h-10 bg-yellow-50 flex items-center justify-center text-yellow-600 shrink-0">
-                <Lightbulb size={20} />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-sm">Innovative Programs</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Future-focused learning</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 px-4">
-              <div className="w-10 h-10 bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-                <Globe size={20} />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-sm">Global Opportunities</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Your future, worldwide</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 px-4">
-              <div className="w-10 h-10 bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0">
-                <Users size={20} />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-sm">Vibrant Campus Life</h4>
-                <p className="text-xs text-slate-500 mt-0.5">Grow, connect, belong</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
