@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { BookOpen, Calendar, User, ArrowRight } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogs';
+import SEO from '../components/SEO';
 
 const Blog = () => {
   const featuredPost = BLOG_POSTS.find(post => post.featured) || BLOG_POSTS[0];
@@ -8,13 +9,18 @@ const Blog = () => {
 
   return (
     <main className="bg-slate-50 min-h-screen">
+      <SEO
+        title="Blog & News"
+        description="Read the latest news, stories, and announcements from New Creation Group of Schools — celebrating achievements and milestones."
+        canonical="/blog"
+      />
       {/* Hero Section */}
       <section className="relative h-[250px] md:h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80"
             alt="School News and Blog"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center lg:object-top"
           />
           <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
         </div>

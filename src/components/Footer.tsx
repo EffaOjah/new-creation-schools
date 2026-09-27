@@ -13,7 +13,10 @@ const Footer = () => {
             <div className="max-w-sm">
               <div className="flex items-center gap-3 mb-6">
                 <img src={logo} alt="NCGOS Logo" className="rounded h-10 w-auto object-contain" />
-                <span className="font-bold text-xl tracking-tight">New Creation Schools</span>
+                <div className="leading-tight">
+                  <div className="font-black text-xl tracking-tight leading-none">New Creation</div>
+                  <div className="text-xs font-semibold text-white/50 tracking-wide">Group of Schools</div>
+                </div>
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
                 Providing quality, holistic education from Nursery through Secondary. Raising tomorrow's leaders with excellence, character, and purpose.
@@ -37,7 +40,7 @@ const Footer = () => {
                 <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
                 <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
                 <li><a href="/admissions" className="hover:text-white transition-colors">Admissions</a></li>
-                <li><a href="/news" className="hover:text-white transition-colors">News & Blog</a></li>
+                <li><a href="/blog" className="hover:text-white transition-colors">News & Blog</a></li>
               </ul>
             </div>
 

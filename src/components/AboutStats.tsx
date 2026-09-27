@@ -1,5 +1,8 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import aboutimg from '../assets/school-overview.jpg';
+import about1 from '../assets/hero1.png';
+import about2 from '../assets/hero2.png';
+import about3 from '../assets/hero3.png';
+import about4 from '../assets/hero4.png';
 
 const highlights = [
     'Nurturing young minds from Nursery through Primary with care and excellence',
@@ -16,22 +19,43 @@ const AboutStats = () => {
                 {/* Image Side */}
                 <div className="flex-1 w-full relative reveal from-left">
                     {/* Decorative background shape */}
-                    <div className="absolute -top-6 -left-6 w-full h-full ] bg-primary/10 z-0" />
-                    <div className="relative z-10 ] overflow-hidden shadow-2xl rounded aspect-[4/5] w-full max-w-md">
-                        <img
-                            src={aboutimg}
-                            alt="Students in a classroom"
-                            className="rounded w-full h-full object-cover"
-                        />
+                    <div className="absolute -top-10 -left-10 w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl z-0" />
+
+                    <div className="relative z-10 grid grid-cols-2 gap-4 w-full max-w-lg mx-auto items-center">
+                        <div className="space-y-4 pt-10">
+                            <img
+                                src={about1}
+                                alt="Students"
+                                className="rounded shadow-xl w-full aspect-[4/5] object-cover"
+                            />
+                            <img
+                                src={about2}
+                                alt="Campus"
+                                className="rounded shadow-xl w-full aspect-square object-cover"
+                            />
+                        </div>
+                        <div className="space-y-4">
+                            <img
+                                src={about3}
+                                alt="Education"
+                                className="rounded shadow-xl w-full aspect-square object-cover"
+                            />
+                            <img
+                                src={about4}
+                                alt="Activities"
+                                className="rounded shadow-xl w-full aspect-[4/5] object-cover"
+                            />
+                        </div>
+
                         {/* Floating stat badge */}
-                        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md px-8 py-4 shadow-xl rounded flex justify-around items-center w-[calc(100%-48px)]">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md px-6 py-4 shadow-2xl rounded flex justify-around items-center w-[85%] z-20">
                             <div className="text-center">
                                 <div className="text-2xl font-bold text-primary">30+</div>
                                 <div className="text-xs text-slate-500 mt-0.5">Years of Excellence</div>
                             </div>
                             <div className="w-px h-10 bg-slate-200" />
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-primary">5000+</div>
+                                <div className="text-2xl font-bold text-primary">500+</div>
                                 <div className="text-xs text-slate-500 mt-0.5">Alumni Strong</div>
                             </div>
                         </div>

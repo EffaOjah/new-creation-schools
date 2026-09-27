@@ -20,7 +20,7 @@ const ContactStrip = () => {
                         <Phone size={24} className="text-primary mb-4" />
                         <h4 className="font-bold text-lg mb-3">Phone Number</h4>
                         <p className="text-sm text-slate-300 flex flex-col gap-1">
-                            <span>+234 816 000 0000</span>
+                            <span>+234 809 958 7456</span>
                         </p>
                     </div>
 

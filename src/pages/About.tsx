@@ -1,16 +1,23 @@
 import { Users, BookOpen, Monitor, Award, Heart, Globe, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import hero1 from '../assets/hero1.png';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <main>
+      <SEO
+        title="About Us"
+        description="Learn about New Creation Group of Schools — our story, mission, vision, and world-class facilities in Calabar, Nigeria."
+        canonical="/about"
+      />
       {/* Hero Section */}
       <section className="relative h-[250px] md:h-[300px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1920&q=80"
+            src={hero1}
             alt="Campus"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center lg:object-top"
           />
           <div className="absolute inset-0 bg-blue-900/80 mix-blend-multiply" />
         </div>
@@ -53,13 +60,13 @@ const About = () => {
             </div>
           </div>
           <div className="relative reveal delay-100">
-            <img 
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" 
-              alt="Students in classroom" 
+            <img
+              src={hero1}
+              alt="Students in classroom"
               className="rounded shadow-xl object-cover w-full h-[500px]"
             />
             <div className="absolute -bottom-6 -left-6 bg-white rounded p-6 shadow-xl max-w-[200px] border border-slate-100">
-              <div className="text-4xl font-bold text-primary mb-2">20+</div>
+              <div className="text-4xl font-bold text-primary mb-2">30+</div>
               <div className="text-sm text-slate-600 font-medium">Years of Educational Excellence</div>
             </div>
           </div>

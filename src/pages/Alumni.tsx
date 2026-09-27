@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { GraduationCap, Search } from 'lucide-react';
+import alumniHero from "../assets/alumni-hero.jpeg";
+import SEO from '../components/SEO';
 
 // Mock Alumni Data
 const ALUMNI_DATA = [
@@ -31,6 +33,11 @@ const Alumni = () => {
 
   return (
     <main className="relative bg-white overflow-hidden">
+      <SEO
+        title="Alumni Network"
+        description="Celebrate and connect with graduates of New Creation Group of Schools. Explore our growing network of proud alumni from Calabar, Nigeria."
+        canonical="/alumni"
+      />
       {/* Background Shape Cuts (Decorative) */}
       <div className="absolute top-[300px] right-0 w-[50vw] h-[800px] bg-slate-50 origin-top-right -skew-y-6 -z-10" />
       <div className="absolute bottom-0 left-0 w-[60vw] h-[600px] bg-blue-50/50 origin-bottom-left skew-y-3 -z-10" />
@@ -39,18 +46,18 @@ const Alumni = () => {
       <section className="relative h-[250px] md:h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80"
+            src={alumniHero}
             onError={(e) => {
               (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80";
             }}
             alt="Alumni Graduation"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center lg:object-top"
           />
           {/* Overlay with a diagonal cut effect */}
           <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent" />
         </div>
-        
+
         {/* SVG Cut shape on the bottom of the hero */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
           <svg className="relative block w-full h-[40px] md:h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -78,19 +85,19 @@ const Alumni = () => {
       {/* Main Content */}
       <section className="py-20 px-6 lg:px-8 relative z-10 min-h-[600px]">
         <div className="max-w-7xl mx-auto">
-          
+
           {/* Header & Filter Row */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-16 reveal">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-2">Past Graduates</h2>
               <p className="text-slate-600">Explore the brilliant minds who have passed through our halls.</p>
             </div>
-            
+
             <div className="flex items-center gap-4 bg-white p-2 rounded shadow-sm border border-slate-200 w-full md:w-auto">
               <div className="pl-3 text-slate-400">
                 <Search size={18} />
               </div>
-              <select 
+              <select
                 className="w-full md:w-48 bg-transparent font-bold text-slate-700 focus:outline-none py-2 pr-4 cursor-pointer"
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
@@ -107,14 +114,14 @@ const Alumni = () => {
           {filteredAlumni.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {filteredAlumni.map((alumni, index) => (
-                <div 
-                  key={alumni.id} 
+                <div
+                  key={alumni.id}
                   className={`bg-white rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal delay-${(index % 4) * 100}`}
                 >
                   <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={alumni.image} 
-                      alt={alumni.name} 
+                    <img
+                      src={alumni.image}
+                      alt={alumni.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     {/* Hover Overlay */}
@@ -123,7 +130,7 @@ const Alumni = () => {
                   <div className="p-6 relative text-center">
                     {/* Decorative cut in the card */}
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-white rotate-45" />
-                    
+
                     <h3 className="text-xl font-bold text-slate-900 mb-1 mt-2 relative z-10">{alumni.name}</h3>
                     <div className="inline-flex items-center justify-center bg-blue-50 text-primary px-3 py-1 rounded text-xs font-bold tracking-wider relative z-10">
                       Class of {alumni.year}

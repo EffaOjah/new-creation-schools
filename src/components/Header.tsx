@@ -17,7 +17,7 @@ const navLinks: NavLink[] = [
     label: 'Media',
     dropdown: [
       { label: 'Blogs', href: '/blog' },
-      { label: 'Gallery', href: '/#media' }
+      { label: 'Gallery', href: '/media' }
     ]
   },
   { label: 'Alumni', href: '/alumni' },
@@ -76,8 +76,9 @@ const Header = () => {
                 alt="New Creation Group of Schools"
                 className="rounded h-16 w-auto object-contain"
               />
-              <div>
-                <h1 className="text-xl lg:text-2xl font-black text-primary tracking-tight">New Creation Schools</h1>
+              <div className="leading-tight">
+                <h1 className="text-xl lg:text-2xl font-black text-primary tracking-tight leading-none">New Creation</h1>
+                <p className="text-xs lg:text-sm font-semibold text-slate-500 tracking-wide">Group of Schools</p>
               </div>
             </Link>
           </div>

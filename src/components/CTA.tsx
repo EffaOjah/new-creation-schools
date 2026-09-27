@@ -1,6 +1,10 @@
 import { ArrowUpRight } from 'lucide-react';
 import ncgosLogo from '../assets/ncgos-logo.png';
 import { Link } from 'react-router-dom';
+import hero1 from "../assets/hero1.png";
+import hero2 from "../assets/hero2.png";
+import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.png";
 
 const CTA = () => {
     return (
@@ -44,16 +48,16 @@ const CTA = () => {
 
                     {/* Orbiting Elements */}
                     <div className="absolute top-[10%] left-[20%] w-10 h-10 overflow-hidden border-[3px] border-white shadow-md rounded bg-white">
-                        <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=100&q=80" alt="Student" className="rounded w-full h-full object-cover" />
+                        <img src={hero1} alt="Student" className="rounded w-full h-full object-cover" />
                     </div>
                     <div className="absolute top-[20%] right-[15%] w-12 h-12 overflow-hidden border-[3px] border-white shadow-md rounded bg-white">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=100&q=80" alt="Student" className="rounded w-full h-full object-cover" />
+                        <img src={hero2} alt="Student" className="rounded w-full h-full object-cover" />
                     </div>
                     <div className="absolute bottom-[30%] right-[10%] w-8 h-8 overflow-hidden border-[3px] border-white shadow-md rounded bg-white">
-                        <img src="https://images.unsplash.com/photo-1551069613-1904dbdcda11?auto=format&fit=crop&w=100&q=80" alt="Student" className="rounded w-full h-full object-cover" />
+                        <img src={hero3} alt="Student" className="rounded w-full h-full object-cover" />
                     </div>
                     <div className="absolute bottom-[15%] left-[25%] w-12 h-12 overflow-hidden border-[3px] border-white shadow-md rounded bg-white">
-                        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=100&q=80" alt="Student" className="rounded w-full h-full object-cover" />
+                        <img src={hero4} alt="Student" className="rounded w-full h-full object-cover" />
                     </div>
                 </div>
 

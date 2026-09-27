@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogs';
 import { useEffect } from 'react';
+import SEO from '../components/SEO';
 
 const BlogDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -26,6 +27,13 @@ const BlogDetail = () => {
 
   return (
     <main className="bg-white min-h-screen pb-20">
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        canonical={`/blog/${post.slug}`}
+        ogImage={post.image}
+        ogType="article"
+      />
       {/* Featured Image Hero */}
       <section className="w-full h-[300px] md:h-[450px] relative">
         <div className="absolute inset-0 z-0">

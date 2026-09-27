@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Alumni from './pages/Alumni';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
+import Media from './pages/Media';
 import CTA from './components/CTA';
 import SocialSidebar from './components/SocialSidebar';
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
       </div>
       <CTA />

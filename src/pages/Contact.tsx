@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from 'lucide-react';
+import hero1 from "../assets/hero1.png";
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,13 +30,18 @@ const Contact = () => {
 
   return (
     <main>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with New Creation Group of Schools in Calabar, Nigeria. Find our address, phone number, email, and send us a message directly."
+        canonical="/contact"
+      />
       {/* Hero Section */}
       <section className="relative h-[250px] md:h-[300px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=2000&q=80"
+            src={hero1}
             alt="Contact Us"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center lg:object-top"
           />
           <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply" />
         </div>
