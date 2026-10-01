@@ -4,7 +4,7 @@ import media10 from '../assets/media/media-10.jpeg';
 import media35 from '../assets/media/media-35.jpeg';
 import media23 from '../assets/media/media-23.jpeg';
 import media4 from '../assets/media/media-4.jpeg';
-import media66 from '../assets/media/media-66.jpeg';
+import media66 from '../assets/media/media-59.jpeg';
 import media77 from '../assets/media/media-77.jpeg';
 import media87 from '../assets/media/media-87.jpeg';
 import media88 from '../assets/media/media-88.jpeg';
