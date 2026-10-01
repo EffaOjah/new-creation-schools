@@ -13,7 +13,7 @@ const Home = () => {
  <SEO canonical="/" />
  <Hero />
  <AboutStats />
- <Features />
+ {/* <Features /> */}
  <MediaSection />
  <Testimonials />
  <NewsFAQ />
