@@ -20,7 +20,7 @@ const navLinks: NavLink[] = [
       { label: 'Gallery', href: '/media' }
     ]
   },
-  { label: 'Alumni', href: '/alumni' },
+  // { label: 'Alumni', href: '/alumni' },
   { label: 'Contact Us', href: '/contact' },
 ];
 

@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
-import Alumni from './pages/Alumni';
+// import Alumni from './pages/Alumni';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Media from './pages/Media';
@@ -49,7 +49,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/alumni" element={<Alumni />} />
+          {/* <Route path="/alumni" element={<Alumni />} /> */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/media" element={<Media />} />
